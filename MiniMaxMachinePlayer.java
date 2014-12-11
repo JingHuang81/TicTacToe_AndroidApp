@@ -43,9 +43,8 @@ public class MiniMaxMachinePlayer {
     public static int[] miniMaxMove(int[] intBoard, int player){
         int[] result = new int[2];
         if (Logic.checkGameFinish(intBoard)){
-            result[0] = SCORES.get(player); // TODO FIND THE CURRENT PLAYER?
+            result[0] = SCORES.get(player); 
             result[1] = -1;
-            // System.out.println("base case");
             return result;
         }
         else {
@@ -62,7 +61,7 @@ public class MiniMaxMachinePlayer {
                     intBoardClone[index] = intBoard[index];
                 }
 
-                intBoardClone[position] = player; // Equivalent to move
+                intBoardClone[position] = player; 
                 if (Logic.checkGameFinish(intBoardClone)){
                     if (Logic.checkForDraw(intBoardClone)){
                         result[0] = SCORES.get(Logic.DRAW);
@@ -71,7 +70,6 @@ public class MiniMaxMachinePlayer {
                         result[0] = SCORES.get(player);
                         result[1] = position;
                     }
-                    // System.out.println("case1");
                     return result;
                 }
                 else{
@@ -83,7 +81,6 @@ public class MiniMaxMachinePlayer {
                         result[0] = compareScore;
                         result[1] = position;
                         if (score == SCORES.get(player)){
-                            // System.out.println("case2");
                             return result;
                         }
                     }
@@ -92,13 +89,11 @@ public class MiniMaxMachinePlayer {
                         result[0] = compareScore;
                         result[1] = position;
                         if (score == SCORES.get(player)){
-                            // System.out.println("case3");
                             return result;
                         }
                     }
                 }
             }
-            // System.out.println("outcome generates from here");
             return result;
         }
     }
