@@ -1,5 +1,6 @@
 package com.example.jim.tictactoe;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 
 
 
-public class Activity extends ActionBarActivity {
+public class TicTacToeGameActivity extends ActionBarActivity {
 
 
     //   public static String[] letters = {
@@ -31,7 +32,10 @@ public class Activity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // TODO: MODIFY HERE
         setContentView(R.layout.activity_tic_tac_toe_game);
+        //Intent intent = getIntent();
+
         gridview = (GridView) findViewById(R.id.gridView);
         //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,letters);
         //gridview.setAdapter(adapter);
