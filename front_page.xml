@@ -6,18 +6,26 @@
     android:weightSum="1"
     android:background="#ffffffff">
 
-    <TextView
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/tic_tac_toe"
-        android:id="@+id/textView"
-        android:layout_gravity="center"
-        android:textColor="#FF000000"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="100dp" />
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/imageView2"
+        android:src="@drawable/tictactoe"
+        android:layout_weight="0.5"
+        android:maxHeight="100dp"
+        android:maxWidth="350dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/tictactoe_logov2"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center" />
 
     <Button
         android:layout_width="wrap_content"
@@ -30,6 +38,7 @@
         android:paddingRight="50dp"
         android:singleLine="false"
         android:background="#00FFFFFF"
+        android:layout_weight="0.5"
         android:onClick="buttonStartOnClick" />
 
 
